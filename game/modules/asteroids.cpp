@@ -305,7 +305,7 @@ EXPORT void ModuleFunc(uint msg, void* param)
 			if (s_gameOver) {
 				s_game->entities.get_system<RenderSystem>().env().saturation = -1.f;
 				ScopedFont sf(s_game->entities, $id(asteroids_big));
-				ImGui::SetNextWindowPosCenter();
+				ImGui::SetNextWindowPosCenter(ImGuiCond_Always);
 				ImGui::Begin("##GameOver", NULL, ImGuiSystem::MinimalWindow);
 				ImGui::Text("Game Over!");
 				ImGui::Text("Score: %d", s_score);

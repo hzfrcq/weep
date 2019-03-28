@@ -191,7 +191,7 @@ EXPORT void ModuleFunc(uint msg, void* param)
 
 			if (s_winner >= 0) {
 				s_game->entities.get_system<RenderSystem>().env().saturation = -1.f;
-				ImGui::SetNextWindowPosCenter();
+				ImGui::SetNextWindowPosCenter(ImGuiCond_Always);
 				ImGui::Begin("##Winner", NULL, ImGuiSystem::MinimalWindow);
 				ImGui::Text("%s Won!", s_names[s_winner]);
 				ImGui::End();
